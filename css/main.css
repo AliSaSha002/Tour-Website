@@ -4,10 +4,10 @@
 }
 
 body {
-  font-family: yekan;
+  font-family: yekan, tahoma, Arial, Helvetica, sans-serif;
   margin: 0px 20px;
   padding: 0px 30px;
-  background-color: #fcfcfc;
+  background-color: var(--main-bg);
   color: #390000;
 }
 
@@ -32,6 +32,31 @@ a:hover{
 
 input{
   color: #390000;
+}
+
+.hover-up{
+  transition: all .4s;
+}
+
+.hover-up:hover{
+  transform: translateY(-5px);
+}
+
+.hover-color{
+  transition: all .4s;
+}
+
+.hover-color:hover {
+    background-color: #ffab47;
+}
+
+.tours-image{
+  border-radius: 10px;
+  background-color: #e6ccae;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* نسبت 16:9 (9/16*100) */
+  overflow: hidden;
 }
 
 /*end of utility*/
@@ -67,14 +92,11 @@ input{
 
 
 /*Menu*/
+
 .menu-item{
   font-size: 17px;
-  transition: all .5s;
 }
 
-.menu-item:hover{
-  transform: translateY(-5px);
-}
 /*End of Menu*/
 
 
@@ -353,8 +375,7 @@ input{
     padding: 20px 30px;
     border-radius: 100px;
     font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s;  
+    text-decoration: none;  
     font-size: 20px;
     text-align: center;
 }
@@ -370,11 +391,6 @@ input{
   .tour-link{
     font-size: 15px;
   }
-}
-
-.tour-link:hover {
-    background-color: #ffab47;
-    color: #390000; !important
 }
 
 /*End of Tours*/
@@ -404,8 +420,13 @@ input{
   margin: 10px 0px;
 }
 
-.card img{
-  border-radius: 5px;
+.card-img-custom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* یا contain */
 }
 
 .card-title{
@@ -507,10 +528,11 @@ input{
   padding: 10px 15px;
 }
 
+
 .see-all{
   color: #390000;
   font-size: 20px;
-  text-decoration: none; !important
+  text-decoration: none;
 }
 
 .see-all:hover{
@@ -558,7 +580,6 @@ input{
   border-radius: 100px;
   padding: 15px;
   background-color: #f8e5c5;
-  transition: all .4s;
   width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -576,7 +597,6 @@ input{
   border-radius: 100px;
   padding: 15px;
   background-color: #f8e5c5;
-  transform: translateY(-5px);
 }
 
 .comment-text{
@@ -636,7 +656,7 @@ input{
 
 
 
-/*footer  f8e5c5*/
+/*footer*/
 .footer{
   background-color: #f8e5c5;
   border-radius: 20px;
@@ -646,14 +666,6 @@ input{
 
 .footer-about, .footer-popular-tours, .footer-useful-links{
   margin: 70px 50px 25px;
-}
-
-@media (max-width: 767px){
-  .footer-about, .footer-popular-tours, .footer-useful-links{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
 }
 
 @media (max-width: 767px){
@@ -688,7 +700,6 @@ input{
 
 .footer li{
   line-height: 40px;
-  transition: all .4s;
 }
 
 @media (max-width: 767px){
@@ -704,7 +715,6 @@ input{
   list-style: none;
   color: #390000;
   text-decoration: none;
-  transform: translateY(-5px);
 }
 
 .footer-link{
